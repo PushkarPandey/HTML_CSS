@@ -1,0 +1,143 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background: rgb(210, 221, 240);
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    margin: auto;
+}
+
+.logo{
+    color: rgb(245, 130, 130);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    min-width: 40%;
+    list-style: none;
+}
+
+.nav-links a{
+    color: rgb(245, 130, 130);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(245, 130, 130);
+    margin: 3px;
+}
+
+@media screen and (max-width: 768px){
+    .burger{
+        display: block;
+    }
+
+    .nav-links{
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        height: 90vh;
+        width: 5vh;
+        background: rgb(210, 221, 240);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+    }
+}
+
+.main{
+    display: grid;
+    height: 92vh;
+    width: 100%;
+    
+    place-items: center;
+}
+
+.my-name{
+    font-family: 'Russo One', sans-serif;
+    font-size: 5rem;
+    background: linear-gradient(45deg, red, green, blue, yellow, purple, violet);
+    background-size: 400%;
+    background-position: left;
+    animation: animate-grad 6s ease infinite alternate;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+
+@keyframes animate-grad{
+    from{
+        background-position: left;
+    }
+    to{
+        background-position: right;
+    }
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;  
+}
+
+section{
+    width: 24%;;
+}
+
+.section1{
+    background-color: rgb(155, 155, 221);
+    background-image: url('./images/Me_Leaning_On_Car.jpg');
+    overflow: hidden;
+    background-blend-mode: luminosity;
+    background-size: 110% 100%;
+}
+
+.section2{
+    background-color: rgb(219, 171, 171);
+    background-image: url('./images/Me_Leaning_On_Railing.jpg');
+    overflow: hidden;
+    background-blend-mode: luminosity;
+    background-size: 110% 100%;
+}
+
+.section3{
+    background-color: rgb(159, 231, 177);
+    background-image: url('./images/Me_Leaning_On_Car.jpg');
+    overflow: hidden;
+    background-blend-mode: luminosity;
+    background-size: 110% 100%;
+}
+
+.section4{
+    background-color: rgb(174, 179, 115);
+    background-image: url('./images/Me_Leaning_On_Railing.jpg');
+    overflow: hidden;
+    background-blend-mode: luminosity;
+    background-size: 110% 100%;
+}

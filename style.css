@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: 'Rock Salt', cursive;
+    font-size: 3em;
+    text-shadow: 4px 4px 4px #aaa;
+    color: rgb(63, 62, 62);
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-transform: uppercase;
+    animation: headingreveal 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#mainbg{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#fronthill{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 2;
+    animation: fronthillmove 2s ease-in-out;
+}
+
+#backhill{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 1;
+    animation: backhillmove 2s ease-in-out;
+}
+
+@keyframes backhillmove {
+    0%{
+        transform: translateX(-20px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fronthillmove {
+    0%{
+        transform: translateX(20px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes headingreveal {
+    0%{
+        opacity: 0;
+        visibility: visible;
+    }
+    100%{
+        opacity: 1.0;
+        visibility: visible;
+    }
+}
